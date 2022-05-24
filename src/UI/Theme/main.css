@@ -1,0 +1,92 @@
+/* #app {
+    background-color: #395453;
+    width: 100%;
+    height: 100%;} */
+.app-body {
+  background-color: #395453;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.header {
+    background-color: #F9F7F3;
+    height: 35px;
+}
+
+.title-parent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.app-title-text {
+    color: #F9F7F3;
+    padding-left: 6%;
+}
+
+.app-search {
+    float: right;
+    margin-top: 20px;
+    margin-right: 135px;
+    background-color:#F9F7F3;
+}
+
+.devices-parent {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 5% 25px 5%
+}
+.device-card {
+    width: 385px;
+    height: 132px;
+    background-color: #f9f7f3;
+    flex: 0;
+    margin: 15px;
+}
+
+.device-card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-weight: 600;
+    padding: 23px 0 0 29px
+}
+
+.device-status {
+    color: #f9f7f3;
+    height: 34px;
+    width: 113px;
+    margin-top: 8px;
+    position: fixed;
+    z-index: 1;
+    /* margin-left: 280px; */
+    font-size: 15px;
+    text-align: center;
+    padding-top: 4px;
+    margin-left: 290px
+}
+
+.MALFUNCTIONING {
+    background-color: #D16565;
+}
+
+.RUNNING {
+    background-color: #33A08E;
+}
+
+.STOPPED {
+    background-color: #888888;
+}
+
+.device-info {
+    padding-left: 30px;
+    /* padding-bottom: 5px; */
+    color: #575757
+}

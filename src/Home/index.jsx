@@ -1,6 +1,15 @@
+import '../UI/Theme/main.css'
+import Header from '../Header/Header'
+import PageTitle from '../Header/PageTitle'
+import DevicesParent from '../DeviceCard/DevicesParent'
+
 function Home() {
   return (
-    <p>And so it begins.</p>
+    <div className="app-body">
+      <Header/>
+      <PageTitle/>
+      <DevicesParent/>
+    </div>
   )
 }
 
