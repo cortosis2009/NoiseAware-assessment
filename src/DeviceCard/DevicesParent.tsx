@@ -1,18 +1,28 @@
 import React, { useEffect, useState } from 'react'
 import DeviceCard from './DeviceCard'
-import { deviceData } from '../utils/types'
+import { deviceData, deviceStatus } from '../utils/types'
 
 interface Props {
   onDeviceClick: () => void
   setDeviceData: (data: deviceData) => void
+  selectedTab: deviceStatus
 }
 
-const DevicesParent: React.FC<Props> = ({ onDeviceClick, setDeviceData }) => {
+const DevicesParent: React.FC<Props> = ({
+  onDeviceClick,
+  setDeviceData,
+  selectedTab,
+}) => {
   const [responseData, setResponseData] = useState<deviceData[]>([])
+  const [filteredData, setFilteredData] = useState<deviceData[]>([])
 
   useEffect(() => {
     getDeviceData()
   }, [])
+
+  useEffect(() => {
+    filterData()
+  }, [selectedTab])
 
   const getDeviceData = async () => {
     const response = await fetch(
@@ -21,6 +31,13 @@ const DevicesParent: React.FC<Props> = ({ onDeviceClick, setDeviceData }) => {
     const json = await response.json()
 
     setResponseData(json.data)
+    setFilteredData(responseData)
+  }
+
+  const filterData = () => {
+    if(selectedTab !== 'ALL') {
+      setFilteredData(responseData.filter(device => device.status.includes(selectedTab)))
+    } else setFilteredData(responseData)
   }
 
   const handleDeviceClick = (data: deviceData) => {
@@ -30,7 +47,7 @@ const DevicesParent: React.FC<Props> = ({ onDeviceClick, setDeviceData }) => {
 
   return (
     <table className="devices-parent">
-      {responseData.map((item: deviceData) => {
+      {filteredData.map((item: deviceData) => {
         return (
           <div key={Math.random()} onClick={() => handleDeviceClick(item)}>
             <DeviceCard

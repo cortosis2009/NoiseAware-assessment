@@ -13,7 +13,6 @@ const DrawerComponent: React.FC<Props> = ({ open, onClose, deviceData }) => {
   const rotorSpeed = deviceData?.operatingParams.rotorSpeed
   const rotorThreshold = deviceData?.operatingParams.rootThreshold
 
-  console.log(deviceData)
   return deviceData ? (
     <Drawer className="drawer-parent" open={open} onClose={onClose} anchor="right">
       <div className="drawer-content">

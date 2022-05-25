@@ -1,13 +1,16 @@
-import React, { useState } from 'react'
-import { connect } from 'react-redux'
+import React from 'react'
 import { deviceStatus } from '../utils/types'
 import { Tab, Tabs } from '@mui/material'
 
-const TabBar = () => {
-  const [selected, setSelected] = useState<deviceStatus>('ALL')
+interface Props {
+  setTabSelection: (input: deviceStatus) => void
+  selectedTab: deviceStatus
+}
+
+const TabBar: React.FC<Props> = ({setTabSelection, selectedTab}) => {
 
   const getClassName = (key: deviceStatus) => {
-      return selected === key ? 'tab selected' : 'tab'
+      return selectedTab === key ? 'tab selected' : 'tab'
   }
 
   return (
@@ -16,26 +19,26 @@ const TabBar = () => {
         <Tab
           className={getClassName('ALL')}
           label="All"
-          onClick={() => setSelected('ALL')}
+          onClick={() => setTabSelection('ALL')}
         ></Tab>
         <Tab
           className={getClassName('MALFUNCTIONING')}
           label="Malfunction"
-          onClick={() => setSelected('MALFUNCTIONING')}
+          onClick={() => setTabSelection('MALFUNCTIONING')}
         ></Tab>
         <Tab
           className={getClassName('STOPPED')}
           label="Stopped"
-          onClick={() => setSelected('STOPPED')}
+          onClick={() => setTabSelection('STOPPED')}
         ></Tab>
         <Tab
           className={getClassName('RUNNING')}
           label="Running"
-          onClick={() => setSelected('RUNNING')}
+          onClick={() => setTabSelection('RUNNING')}
         ></Tab>
       </Tabs>
     </>
   )
 }
 
-export default connect()(TabBar)
+export default TabBar
