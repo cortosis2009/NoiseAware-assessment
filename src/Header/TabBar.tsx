@@ -15,7 +15,7 @@ const TabBar: React.FC<Props> = ({setTabSelection, selectedTab}) => {
 
   return (
     <>
-      <Tabs className="tab-parent">
+      <Tabs className="tab-parent" value={0}>
         <Tab
           className={getClassName('ALL')}
           label="All"

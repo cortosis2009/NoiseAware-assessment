@@ -15,10 +15,6 @@
   height: 35px;
 }
 
-/* .page-title-parent {
-
-} */
-
 .title-search-parent {
   display: flex;
   justify-content: space-between;
@@ -50,7 +46,7 @@
   height: 132px;
   background-color: #f9f7f3;
   flex: 0;
-  margin: 15px;
+  margin: 25px;
   cursor: pointer;
 }
 
@@ -96,56 +92,62 @@
 }
 
 .tab-parent {
-    padding-left: 4%
+  padding-left: 4%;
 }
 
 .tab {
-    color: #f9f7f3 !important;
+  color: #f9f7f3 !important;
 }
 
 .selected {
-    border-bottom: 4px solid #33a08e !important
+  border-bottom: 4px solid #33a08e !important;
 }
 
 .drawer-parent {
-    width: 392px
+  width: 392px;
 }
 
 .drawer-content {
-    width: 392px;
-    display: block;
+  width: 392px;
+  display: block;
 }
 
 .drawer-badge {
-    margin-left: 30px;
-    margin-top: -12px;
+  margin-left: 30px;
+  margin-top: -12px;
 }
 
 .drawer-id {
-    margin-top: 45px;
+  margin-top: 45px;
 }
 
 .param-parent {
-    margin: 30px 0 0 30px
+  margin: 30px 0 0 30px;
 }
 
 .param-title {
-    margin-top: 10px
+  margin-top: 10px;
 }
 
 .horizontal-break {
-    width: 90%;
+  width: 90%;
 }
 
 .param-data {
-    font-weight: 400;
-    font-size: 45px;
+  font-weight: 400;
+  font-size: 45px;
 }
 
 .device-delete {
-    color: red;
-    position: fixed;
-    bottom: 20px;
-    margin-left: 30px;
-    cursor: pointer;
+  color: red;
+  position: fixed;
+  bottom: 20px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.pagination-parent {
+  position: fixed;
+  bottom: 30px;
+  right: 60px;
 }
