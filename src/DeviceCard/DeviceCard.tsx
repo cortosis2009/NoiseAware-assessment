@@ -1,5 +1,6 @@
 import React from 'react'
 import { deviceStatus } from '../utils/types'
+import { formatStatus } from '../utils/utils'
 
 interface Props {
   status: deviceStatus
@@ -9,10 +10,6 @@ interface Props {
 }
 
 const DeviceCard: React.FC<Props> = ({ status, title, id, createdDate }) => {
-  const formatStatus = (status: deviceStatus) => {
-    let tempStatus = status.toLocaleLowerCase()
-    return tempStatus.charAt(0).toUpperCase() + tempStatus.slice(1)
-  }
 
   return (
     <div className="device-card">

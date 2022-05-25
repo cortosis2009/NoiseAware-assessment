@@ -1,5 +1,4 @@
-export type deviceStatus = 'MALFUNCTIONING' | 'STOPPED' | 'RUNNING'
-
+export type deviceStatus = 'MALFUNCTIONING' | 'STOPPED' | 'RUNNING' | 'ALL'
 export type deviceData = {
   asset: {
     alias: String
@@ -7,7 +6,7 @@ export type deviceData = {
   }
   id: Number
   operatingParams: {
-    rotorThreshold: Number
+    rootThreshold: Number
     rotorSpeed: Number
     slack: Number
   }

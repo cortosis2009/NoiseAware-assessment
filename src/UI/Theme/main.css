@@ -1,7 +1,3 @@
-/* #app {
-    background-color: #395453;
-    width: 100%;
-    height: 100%;} */
 .app-body {
   background-color: #395453;
   position: fixed;
@@ -15,78 +11,141 @@
 }
 
 .header {
-    background-color: #F9F7F3;
-    height: 35px;
+  background-color: #f9f7f3;
+  height: 35px;
 }
 
-.title-parent {
-    display: flex;
-    justify-content: space-between;
+/* .page-title-parent {
+
+} */
+
+.title-search-parent {
+  display: flex;
+  justify-content: space-between;
 }
 
 .app-title-text {
-    color: #F9F7F3;
-    padding-left: 6%;
+  color: #f9f7f3;
+  padding-left: 6%;
 }
 
 .app-search {
-    float: right;
-    margin-top: 20px;
-    margin-right: 135px;
-    background-color:#F9F7F3;
+  float: right;
+  margin-top: 20px;
+  margin-right: 135px;
+  background-color: #f9f7f3;
+  border-radius: 30px !important;
+  width: 239px;
+  height: 40px;
 }
 
 .devices-parent {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 5px 5% 25px 5%
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 5% 25px 5%;
 }
+
 .device-card {
-    width: 385px;
-    height: 132px;
-    background-color: #f9f7f3;
-    flex: 0;
-    margin: 15px;
+  width: 385px;
+  height: 132px;
+  background-color: #f9f7f3;
+  flex: 0;
+  margin: 15px;
+  cursor: pointer;
 }
 
 .device-card-header {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .card-title {
-    font-weight: 600;
-    padding: 23px 0 0 29px
+  font-weight: 600;
+  padding: 23px 0 0 29px;
 }
 
 .device-status {
-    color: #f9f7f3;
-    height: 34px;
-    width: 113px;
-    margin-top: 8px;
-    position: fixed;
-    z-index: 1;
-    /* margin-left: 280px; */
-    font-size: 15px;
-    text-align: center;
-    padding-top: 4px;
-    margin-left: 290px
+  color: #f9f7f3;
+  height: 34px;
+  width: 113px;
+  margin-top: 8px;
+  position: fixed;
+  z-index: 1;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 4px;
+  margin-left: 290px;
 }
 
 .MALFUNCTIONING {
-    background-color: #D16565;
+  background-color: #d16565;
 }
 
 .RUNNING {
-    background-color: #33A08E;
+  background-color: #33a08e;
 }
 
 .STOPPED {
-    background-color: #888888;
+  background-color: #888888;
 }
 
 .device-info {
-    padding-left: 30px;
-    /* padding-bottom: 5px; */
-    color: #575757
+  padding-left: 30px;
+  /* padding-bottom: 5px; */
+  color: #575757;
+}
+
+.tab-parent {
+    padding-left: 4%
+}
+
+.tab {
+    color: #f9f7f3 !important;
+}
+
+.selected {
+    border-bottom: 4px solid #33a08e !important
+}
+
+.drawer-parent {
+    width: 392px
+}
+
+.drawer-content {
+    width: 392px;
+    display: block;
+}
+
+.drawer-badge {
+    margin-left: 30px;
+    margin-top: -12px;
+}
+
+.drawer-id {
+    margin-top: 45px;
+}
+
+.param-parent {
+    margin: 30px 0 0 30px
+}
+
+.param-title {
+    margin-top: 10px
+}
+
+.horizontal-break {
+    width: 90%;
+}
+
+.param-data {
+    font-weight: 400;
+    font-size: 45px;
+}
+
+.device-delete {
+    color: red;
+    position: fixed;
+    bottom: 20px;
+    margin-left: 30px;
+    cursor: pointer;
 }

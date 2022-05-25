@@ -1,9 +1,8 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
-
 import cache from '~/IO/Cache'
 
-import App from './App'
+import App from './Home/App'
 import createStore from './bundles'
 import Root from './Root'
 
@@ -13,8 +12,15 @@ cache.getAll().then((data) => {
     console.debug('hydrating store from cache:', data)
   }
 
+  
+  const selectedTabReducer = function (state = '', action) {
+    return state === action.type
+  }
+
+
   const store = createStore({
     ...data,
+    selectedTabReducer
   })
 
   const container = document.getElementById('app')

@@ -13,7 +13,7 @@ function Root({ App, store }) {
     <ReduxBundlerProvider store={store}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <App />
+        <App store={store} />
       </ThemeProvider>
     </ReduxBundlerProvider>
   )

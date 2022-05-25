@@ -1,9 +1,9 @@
 import { createRouteBundle } from 'redux-bundler'
 
-import Home from '../Home'
+import App from '../Home/App'
 import NotFound from '../NotFound'
 
 export default createRouteBundle({
-  '/': Home,
+  '/': App,
   '*': NotFound,
 })
